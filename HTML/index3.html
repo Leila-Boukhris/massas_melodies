@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massa's Melodies - Discover Souss Massa Music</title>
+    <meta name="description" content="Discover the rich musical heritage of Souss Massa. Explore traditional instruments, rhythms, and melodies from Morocco's musical culture.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/png321 (2).png">
+    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="container">
+            <div class="content-center">
+                <!-- Logo Placeholder -->
+                <div class="logo-section animate-slide-up">
+                    <div class="logo-placeholder">
+                        <i data-lucide="music" class="logo-icon"></i>
+                    </div>
+                    <div class="logo-text">Logo placeholder</div>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="main-title animate-slide-up">
+                    Massa's <span class="text-gradient">Melodies</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="subtitle animate-slide-up">
+                    Discover the rich musical heritage of Souss Massa
+                </p>
+
+                <!-- Musical Elements -->
+                <div class="musical-elements animate-slide-up">
+                    <div class="music-icon">
+                        <i data-lucide="guitar" class="icon-orange"></i>
+                    </div>
+                    <div class="music-icon bounce-gentle">
+                        <i data-lucide="music" class="icon-red"></i>
+                    </div>
+                    <div class="music-icon">
+                        <i data-lucide="mic" class="icon-yellow"></i>
+                    </div>
+                </div>
+
+                <!-- Get Started Button -->
+                <button class="btn btn-gradient animate-slide-up" onclick="showAuth()">
+                    Get Started
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                </button>
+
+                <!-- Feature Preview -->
+                <div class="features-grid animate-slide-up">
+                    <div class="feature-card">
+                        <i data-lucide="search" class="feature-icon icon-orange"></i>
+                        <h3>Discover Music</h3>
+                        <p>Explore traditional and modern Souss Massa music</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="headphones" class="feature-icon icon-red"></i>
+                        <h3>Listen & Learn</h3>
+                        <p>Immerse yourself in authentic musical experiences</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="users" class="feature-icon icon-yellow"></i>
+                        <h3>Connect</h3>
+                        <p>Join a community of music enthusiasts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Page -->
+    <div id="auth-page" class="page">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Back Button -->
+                <button class="btn btn-ghost back-btn" onclick="showLanding()">
+                    <i data-lucide="arrow-left" class="btn-icon"></i>
+                    Back to Home
+                </button>
+
+                <!-- Auth Card -->
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="auth-logo">
+                            <i data-lucide="music" class="auth-logo-icon"></i>
+                        </div>
+                        <h2 class="auth-title">Welcome to Massa's Melodies</h2>
+                        <p class="auth-subtitle">Sign in to continue your musical journey</p>
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleAuth(event)">
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-wrapper">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" class="form-input" required>
+                                <i data-lucide="mail" class="input-icon"></i>
+                            </div>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="password" name="password" placeholder="Enter your password" class="form-input" required>
+                                <i data-lucide="lock" class="input-icon"></i>
+                            </div>
+                            <div class="error-message" id="password-error"></div>
+                        </div>
+
+                        <!-- Country Field -->
+                        <div class="form-group">
+                            <label for="country" class="form-label">Country</label>
+                            <div class="input-wrapper">
+                                <select id="country" name="country" class="form-select" required>
+                                    <option value="">Select your country</option>
+                                    <option value="morocco">Morocco</option>
+                                    <option value="algeria">Algeria</option>
+                                    <option value="tunisia">Tunisia</option>
+                                    <option value="egypt">Egypt</option>
+                                    <option value="france">France</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="usa">United States</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i data-lucide="globe" class="input-icon"></i>
+                            </div>
+                            <div class="error-message" id="country-error"></div>
+                        </div>
+
+                        <form action="index.html">
+                            <button type="submit" class="btn btn-gradient btn-full">
+                            Continue to Massa's Melodies
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                            </button>
+                        </form>
+                    <!-- Footer -->
+                    <div class="auth-footer">
+                        <p>By continuing, you agree to our Terms of Service and Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i data-lucide="check-circle" class="toast-icon"></i>
+            <div class="toast-text">
+                <div class="toast-title">Authentication Successful!</div>
+                <div class="toast-description">Welcome to Massa's Melodies.</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>

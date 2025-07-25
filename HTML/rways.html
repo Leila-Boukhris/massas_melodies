@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rways Music</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/png321 (2).png">
+  <style>
+    .music-detail {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .music-detail h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .music-detail-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .music-detail-image {
+      width: 45%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      object-fit: cover;
+      height: auto;
+      max-height: 300px;
+    }
+
+    .music-detail-info {
+      flex: 1;
+      padding-right: 1rem;
+    }
+
+    .music-detail-info p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .music-detail-info h3 {
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .music-detail-container {
+        flex-direction: column;
+      }
+
+      .music-detail-image {
+        width: 100%;
+        border-radius: 20px;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="images/png white.png" alt="Home" style="height:90px; vertical-align:middle; margin-bottom: 5px; position: relative; top: -5px;">
+      <a href="training.html">Get Your Certificate</a>
+      <a href="store.html">Store</a>
+      <a href="About.html">About Us</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html" class="contact-button">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="music-detail">
+    <h1>Rways Music</h1>
+    <div class="music-detail-container">
+      <img src="images/telecharger_57.jpeg" alt="Rways Instrument" class="music-detail-image" />
+      <div class="music-detail-info">
+        <p>
+          Rways is a collective of musicians and poets from the Souss Massa region, known for their traditional performances and storytelling through music.
+          They preserve and perform the oral traditions of the region, combining music with poetry and history.
+        </p>
+        <h3>Instruments You Can Try:</h3>
+        <ul>
+          <li>Naqos</li>
+          <li>Ribab</li>
+          <li>Tbel</li>
+        </ul>
+        <a href="index2.html?music=rways" class="try-button">Try These Instruments</a>
+      </div>
+    </div>
+  </main>
+</body>
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Massa's Melodies. All rights reserved.</p>
+    </div>
+  </footer>
+</html>

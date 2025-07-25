@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Moroccan Instruments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/png321 (2).png">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        #musicTitle {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .selector {
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .selector label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+
+        .selector select {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .selector select:hover {
+            border-color: #4ecdc4;
+        }
+
+        #instructions {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        #instructions h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        #instructions p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        #instrumentImages {
+            margin: 3rem auto;
+            max-width: 800px;
+        }
+
+        #instrumentImages h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .instrument-preview-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .instrument-preview {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .instrument-preview:hover {
+            transform: translateY(-5px);
+        }
+
+        .instrument-preview img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .instrument-preview p {
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #4ecdc4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #45b7b0;
+            transform: translateY(-2px);
+        }
+
+        #musicTypeImage {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 0 auto 2rem;
+            display: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .instruments-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .instrument-card {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .instrument-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .instrument-card.selected {
+            grid-column: span 2;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .instrument-card.selected img {
+            height: 300px;
+        }
+
+        .instrument-card:not(.selected) {
+            filter: grayscale(40%);
+        }
+
+        .instrument-card h3 {
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="images/png white.png" alt="Home" style="height:90px; vertical-align:middle; margin-bottom: 5px; position: relative; top: -5px;">
+            <a href="training.html">Get Your Certificate</a>
+            <a href="store.html">Store</a>
+            <a href="About.html">About Us</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 id="musicTitle">Test Moroccan Instruments</h1>
+        <img id="musicTypeImage" alt="Type de musique" />
+
+        <div class="selector">
+            <label for="musicType">Select a Music Type :</label>
+            <select id="musicType">
+                <option value="">-- choose  --</option>
+                <option value="Ahwach">Ahwach</option>
+                <option value="Chaabi">Chaabi</option>
+                <option value="Gnawa">Gnawa</option>
+                <option value="Hwara">Hwara</option>
+                <option value="Rways">Rways</option>
+            </select>
+        </div>
+
+        <div id="instrumentsGrid" style="display:none;">
+            <h2>Select An Instrument :</h2>
+            <div class="instruments-container">
+                <!-- Les instruments seront ajoutés ici dynamiquement -->
+            </div>
+        </div>
+
+        <div id="instructions" style="display:none;">
+            <h2>Use Your Keyboard :</h2>
+            <p>Touche 1 → Note 1</p>
+            <p>Touche 2 → Note 2</p>
+            <p>Touche 3 → Note 3</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">Return Home</a>
+        </div>
+    </div>
+
+    <script src="scripts2.js"></script>
+    <script>
+        // Focus automatique sur le sélecteur d'instruments après le chargement
+        window.addEventListener('load', () => {
+            const instrumentType = document.getElementById('instrumentType');
+            if (instrumentType && instrumentType.style.display !== 'none') {
+                instrumentType.focus();
+            }
+        });
+    </script>
+</body>
+</html>

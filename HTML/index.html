@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massa's Melodies - Discover Souss Massa Music</title>
+    <meta name="description" content="Discover the rich musical heritage of Souss Massa. Explore traditional instruments, rhythms, and melodies from Morocco's musical culture.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massa's Melodies</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/png321 (2).png">
+  <style>
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, #f5f5f5, transparent);
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .explore-section {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .explore-section::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 50%);
+      animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .music-box {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .music-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background: linear-gradient(45deg, rgba(255,107,107,0.2), rgba(78,205,196,0.2));
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .music-box:hover::after {
+      opacity: 1;
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 800;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #ffd700;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 500;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text-container {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem 4rem;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    .instruments-list {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+
+    .instruments-list span {
+      padding: 0.3rem 0.6rem;
+      background: rgba(78, 205, 196, 0.1);
+      border-radius: 15px;
+    }
+
+    .music-box:hover .instruments-list span {
+      background: rgba(78, 205, 196, 0.2);
+    }
+  </style>
+</head>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="images/png white.png" alt="Home" style="height:90px; vertical-align:middle; margin-bottom: 5px; position: relative; top: -5px;">
+      <a href="training.html">Get Your Certificate</a>
+      <a href="store.html">Store</a>
+      <a href="About.html">About Us</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html" class="contact-button">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text-container">
+      <h1 class="hero-title">Massa's Melodies</h1>
+      <p class="hero-subtitle">created by Innovators</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="images/territoires-1160x746.png" alt="Souss Massa Music History" />
+    <div class="text">
+      <h2>History of Souss Massa Music</h2>
+      <p>
+        The Souss Massa region is home to rich musical traditions shaped by Amazigh (Berber) culture.
+        From the spiritual rhythms of Gnawa, to the celebratory beats of Dakka Houarya, and the poetic chants of Ahwach and Rways, these styles
+        are deeply rooted in community life and storytelling.
+      </p>
+    </div>
+  </section>
+
+  <section class="explore-section">
+    <h2>Explore Different Souss Massa Instruments</h2>
+    <div class="music-types">
+      <a href="gnawa.html" class="music-box">
+        <img src="images/gnawa.jpeg" alt="Gnawa Instrument" />
+        <p>Gnawa Music</p>
+      </a>
+      <a href="dakka.html" class="music-box">
+        <img src="images/telecharger_55.jpeg" alt="Dakka Houarya Instrument" />
+        <p>Dakka Houarya Music</p>
+      </a>
+      <a href="ahwach.html" class="music-box">
+        <img src="images/ahwach.jpeg" alt="Ahwach Instrument" />
+        <p>Ahwach Music</p>
+      </a>
+      <a href="rways.html" class="music-box">
+        <img src="images/telecharger_57.jpeg" alt="Rways Instrument" />
+        <p>Rways Music</p>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Massa's Melodies. All rights reserved.</p>
+    </div>
+  </footer>
+</html>
